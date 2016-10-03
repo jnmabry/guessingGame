@@ -36,42 +36,35 @@
                 <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
             </fieldset>
         </div>
-        <div class="row text-center">
-            <h1>You Have 10 Tries Left!</h1>
+        <div class="row text-center tries-container">
+            <h1 id="triesLeft">You Have 10 Tries Left!</h1>
         </div><br />
         <div class="row text-center">
 
-            <div class="col-md-4 thumbnail">
+            <div class="col-md-4 thumbnail" id="b1">
                 <div class="row">
-                    <input type="text" class="guess" id="guess1" placeholder="1" />
+                    <input type="text" maxlength="1" class="guess" id="guess1" placeholder="" />
                 </div>
             </div>
 
-            <div class="col-md-4 thumbnail">
-                <input type="text" class="guess" id="guess2" placeholder="2" />
+            <div class="col-md-4 thumbnail" id="b2">
+                <input type="text" maxlength="1" class="guess" id="guess2" placeholder="" />
             </div>
 
-            <div class="col-md-4 thumbnail">
-                <input type="text" class="guess" id="guess3" placeholder="3" />
+            <div class="col-md-4 thumbnail" id="b3">
+                <input type="text" maxlength="1" class="guess" id="guess3" placeholder="" />
             </div>
 
-        <input type="button" id="submit" value="submit" /><br />
-
+            <div class="startAgain"><input type="button" id="submit" value="submit" /><br /> </div>
+            <br /> <p>If a number does not match that boxs number, and does not match any of the numbers in the sequence, the box should
+                be red</p>
+            <p>If a number matches that boxs number, the box should be green</p>
+            <p>If a number does not match that boxs number, but does match one of the numbers in the sequence, the box should
+                be yellow</p>
         </div>
     </div>
 
 
-    <fieldset class="text-center">
-
-        <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" />
-        <input type="button" onclick="generateNumberToGuess(true)" value="New Game" /><br />
-        <input id="cheat" type="checkbox" value="cheat" onclick="showNumberToGuess()" />
-        <label for="cheat">Cheat</label>
-        <div id="cheatShow" style="display: none;">
-            <input id="numberToGuess" type="text" />
-            <label for="numberToGuess">Number to guess</label>
-        </div>
-    </fieldset>
 
 
     </div>
